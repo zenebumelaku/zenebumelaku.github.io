@@ -1,34 +1,194 @@
-<head> 
-  <link rel="stylesheet" href="coffee.css">
-  
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎉 Happy Birthday Nati 🎂</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Fira Code", monospace;
+        background: radial-gradient(
+          circle at center,
+          #0f2027,
+          #203a43,
+          #2c5364
+        );
+        color: #fff;
+        overflow: hidden;
+      }
+      h1 {
+        font-family: "Pacifico", cursive;
+        font-size: 3rem;
+        text-align: center;
+        margin-top: 80px;
+        animation: bounceIn 2s ease-in-out;
+        color: #ffeaa7;
+        text-shadow: 0 0 10px #fd79a8, 0 0 20px #fd79a8;
+      }
+      .message {
+        max-width: 700px;
+        margin: 30px auto;
+        padding: 25px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+        font-size: 1.3rem;
+        line-height: 1.7;
+        animation: slideUp 2.5s ease-in-out;
+        color: #dfe6e9;
+      }
+      .footer {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 1rem;
+        opacity: 0.7;
+        animation: fadeIn 4s ease-in-out;
+      }
+      @keyframes bounceIn {
+        0% {
+          transform: scale(0.8);
+          opacity: 0;
+        }
+        60% {
+          transform: scale(1.1);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .confetti {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: yellow;
+        animation: confettiFall 5s infinite linear;
+        opacity: 0.9;
+        border-radius: 50%;
+      }
+      @keyframes confettiFall {
+        0% {
+          transform: translateY(-10px) rotate(0deg);
+        }
+        100% {
+          transform: translateY(110vh) rotate(720deg);
+        }
+      }
+      .terminal-box {
+        font-family: "Fira Code", monospace;
+        background: #2d3436;
+        color: #00ff99;
+        border-radius: 10px;
+        padding: 20px;
+        width: 90%;
+        max-width: 600px;
+        margin: 50px auto;
+        box-shadow: 0 0 20px #00ff99;
+        animation: typeIn 3s steps(40, end);
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      .terminal-box::before {
+        content: "";
+        color: #55efc4;
+      }
+      @keyframes typeIn {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+      .loader {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        border: 4px solid #ffeaa7;
+        border-top-color: transparent;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
   <body>
-  <div class="container">
-    <nav> 
-      <a href="#" id="logo"> COFFEE</a>
-      <ul> 
-        <li>  <a href="#"> Home</a> </li>
-        <li>  <a href="#"> About</a> </li>
-        <li>  <a href="#"> Contact</a></li>
-      </ul>
-    </nav>
-    <div class="content">
-      <div class="text"> 
-        <h1>SPECIALTY COFFEE <br>
-          AND DELICIOUS<br>
-          TREATS </h1> <br>
-        <p>Indulge in the rich aroma of freshly brewed coffee and savor the
-          exquisite flavors of our handcrafted pastries. Our cozy coffee
-          shop is the perfect spot to relax, recharge, and enjoy your
-          favorite brew.</p>
-       </div>
-      <div class ="img"> 
-        <img src = "/Users/zeni/Downloads/pngwing.com.png" alt="descriobion">
-  
-      </div>
+    <div class="loader"></div>
+
+    <h1>🎉 Happy Birthday, Nati! 🎂</h1>
+
+    <div class="terminal-box">
+      " .Happy Birthday to one of the most amazing soul! "
     </div>
-    
+
+    <div class="message">
+      <p>
+        You're sweet, humble, incredibly smart — truly everything good in one
+        person. I'm beyond lucky to have you in my life, and I can’t wait to see
+        what the future holds for us. You deserve all the love, joy, and success
+        this world has to offer. Your presence is calming, peaceful, and a true
+        blessing to those around you. I’m so glad you were born and that we get
+        to share this life with you. Wishing you all the best as you step into
+        this next beautiful chapter. May God bless you always. 💫💛 – Zeni
+      </p>
+    </div>
+
+    <div class="footer">
+      Made with 💻 and 🎂 by Zeni • Powered by React Vibes
+    </div>
+
+    <script>
+      const colors = ["#fd79a8", "#00cec9", "#ffeaa7", "#55efc4", "#fab1a0"];
+      for (let i = 0; i < 150; i++) {
+        const confetti = document.createElement("div");
+        confetti.className = "confetti";
+        confetti.style.left = Math.random() * 100 + "vw";
+        confetti.style.animationDuration = Math.random() * 3 + 2 + "s";
+        confetti.style.backgroundColor =
+          colors[Math.floor(Math.random() * colors.length)];
+        document.body.appendChild(confetti);
+      }
+    </script>
+
+    <audio autoplay loop>
+      <source
+        src="https://cdn.pixabay.com/download/audio/2023/04/26/audio_cbfd011264.mp3?filename=don-t-worry-be-happy-cover-142924.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
   </body>
-  
-  
-  
+</html>
